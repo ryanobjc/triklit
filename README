@@ -1,0 +1,11 @@
+to recompile:
+ cd CONF
+ make clean
+ make
+ cd ..
+ make clean
+ make
+
+then you can run any of the demos named *.exe
+for example:
+  ./sequence

@@ -1,0 +1,7 @@
+for use on a MAC:
+ in CONF/config.h
+    set #ifdef LITTLEENDIAN depending on intel/powerpc processor
+ in CONF/out_file.c:
+    set OUT_NAME_FORMAT to /dev/cu.usbmodemXXXX
+    find XXXX by connecting USB interface and then looking in
+    /dev for new usbmodem device name that appears
