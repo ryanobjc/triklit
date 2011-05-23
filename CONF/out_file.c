@@ -55,7 +55,7 @@
 //   #define OUT_NAME_FORMAT "out.bin"       (if one output device only)
 //   #define OUT_NAME_FORMAT "out%d.bin"
 
-#define OUT_NAME_FORMAT "/dev/com10"        // define this to be COM port of USB4 interface
+#define OUT_NAME_FORMAT "/dev/cu.usbmodem3d11"        // define this to be COM port of USB4 interface
 #define OUT_NAME_NUM  1               // base output number to start at
 
 
@@ -364,9 +364,10 @@ frame_tx()
 {
   int d;
 
-  for (d = 0; d < OUTPUT_DEVICES; d++)
+  for (d = 0; d < OUTPUT_DEVICES; d++) {
     fwrite(frame[d],1,fc[d],ofp[d]);
-  fflush(ofp[d]);
+    fflush(ofp[d]);
+  }
 }
 
 

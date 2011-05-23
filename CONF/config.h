@@ -8,7 +8,7 @@
 // maplen should be at least longest dimension * 2
 #define MAPLEN 64
 
-//#define BSD         // if BSD
-#define WIN       // if Windows
+#define BSD         // if BSD
+//#define WIN       // if Windows
 
-#define LITTLEENDIAN  // for intel, comment out for powerpc
+//#define LITTLEENDIAN  // for intel, comment out for powerpc
